@@ -11,14 +11,11 @@ import App from './components/App';
 
 // // make sure middleware works with the store and reducer
 // const sagaMiddleware = createSagaMiddleware();
-// const store = createStore(
-//   reducer,
+const store = createStore(
+  reducer,
 //   applyMiddleware(sagaMiddleware),
-// );
+);
 // sagaMiddleware.run(saga);
-
-//build fake store for now
-const store = createStore(()=>{});
 
 // make sure the app has access to state
 render(
