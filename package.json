@@ -29,13 +29,23 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-watch": "^2.0.7",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "expect": "^22.0.3",
     "jest": "^22.0.4",
+    "jest-enzyme": "^4.0.2",
     "webpack": "^3.10.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "unmockedModulePathPatterns": [
+      "react",
+      "enzyme",
+      "jest-enzyme"
+    ]
   }
 }
