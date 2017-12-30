@@ -1,5 +1,5 @@
 {
-  "name": "Workast_Project",
+  "name": "workast_project",
   "version": "1.0.0",
   "description": "Giphy Search",
   "main": "webpack.config.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "css-loader": "^0.28.7",
+    "expect": "^22.0.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
