@@ -26,4 +26,9 @@ describe('reducer', () => {
       expect(reducer({ isFetching: true }, { type: 'FETCH_GIFS_ERROR' }).isFetching).toBeFalsy();
     });
   });
+  describe('change value', () => {
+    it('should update searchTerm', () => {
+      expect(reducer({ searchTerm: 'first' }, { type: 'CHANGE_SEARCH_VALUE', val: 'second' }).searchTerm).toEqual('second');
+    });
+  });
 });

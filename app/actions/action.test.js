@@ -14,4 +14,8 @@ describe('actions', () => {
     const expectedAction = { type: 'FETCH_GIFS_ERROR', err: 'some error message' };
     expect(actions.fetchGifsError('some error message')).toEqual(expectedAction);
   });
+  it('should create action for changing value', () => {
+    const expectedAction = { type: 'CHANGE_SEARCH_VALUE', val: 'narwhals' };
+    expect(actions.changeSearchValue('narwhals')).toEqual(expectedAction);
+  });
 });

@@ -26,6 +26,12 @@ export default (state = initialState, action) => {
         isFetching: false,
       };
     }
+    case ('CHANGE_SEARCH_VALUE'): {
+      return {
+        ...state,
+        searchTerm: action.val,
+      };
+    }
     default:
       return state;
   }
