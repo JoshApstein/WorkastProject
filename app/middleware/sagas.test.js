@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import * as actions from '../actions/action';
 import fetchGifs from '../api/api';
 import mainSaga, { fetchGifsFromApi } from './sagas';
@@ -7,7 +7,7 @@ import mainSaga, { fetchGifsFromApi } from './sagas';
 describe('main saga', () => {
   it('sends all request actions to generator', () => {
     const gen = mainSaga();
-    expect(gen.next().value).toEqual(takeEvery('FETCH_GIFS_REQUEST', fetchGifsFromApi));
+    expect(gen.next().value).toEqual(takeLatest('FETCH_GIFS_REQUEST', fetchGifsFromApi));
   });
   describe('fetching gifs saga', () => {
     const gen = fetchGifsFromApi({ term: 'some search term' });

@@ -1,4 +1,4 @@
-import { put, call, takeEvery } from 'redux-saga/effects';
+import { put, call, takeLatest } from 'redux-saga/effects';
 import * as actions from '../actions/action';
 import fetchGifs from '../api/api';
 
@@ -12,5 +12,5 @@ export function* fetchGifsFromApi(action) {
 }
 
 export default function* takeAllRequests() {
-  yield takeEvery('FETCH_GIFS_REQUEST', fetchGifsFromApi);
+  yield takeLatest('FETCH_GIFS_REQUEST', fetchGifsFromApi);
 }
