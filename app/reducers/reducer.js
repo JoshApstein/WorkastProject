@@ -1,9 +1,11 @@
+// init state (no search yet, spinner, { [searchTerm]: [array] })
 const initialState = {
   searchTerm: '',
   isFetching: false,
   gifs: {},
 };
 
+// reducer function to update state
 export default (state = initialState, action) => {
   switch (action.type) {
     case ('FETCH_GIFS_REQUEST'): {
