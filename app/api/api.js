@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 export default (search) => {
   if (!search) {
-    throw new Error('Cannot read property \'data\' of undefined');
+    return new Error('Cannot read property \'data\' of undefined');
   }
   // get data from giphy api
   // eslint-disable-next-line
