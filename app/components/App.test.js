@@ -35,7 +35,7 @@ describe('App Component', () => {
     it('should render a search bar', () => {
       expect(app().children().find(SearchBar).length).toEqual(1);
     });
-    it('should render main area', () => {
+    it('should render gifsornot', () => {
       expect(app().children().find(GifsOrNot).length).toEqual(1);
     });
   });

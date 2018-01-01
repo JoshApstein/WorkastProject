@@ -18,4 +18,8 @@ describe('actions', () => {
     const expectedAction = { type: 'CHANGE_SEARCH_VALUE', val: 'narwhals' };
     expect(actions.changeSearchValue('narwhals')).toEqual(expectedAction);
   });
+  it('should create action for changing page', () => {
+    const expectedAction = { type: 'CHANGE_PAGE', currPage: 1 };
+    expect(actions.changePage(1)).toEqual(expectedAction);
+  });
 });

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Gif from './Gif';
+import Pages from '../containers/Pages';
 
 const Results = props => (
   <div>
+    <Pages />
     {props.currentGifs.map(image => (
       <Gif
         key={image.id}

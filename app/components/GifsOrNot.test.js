@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import expect from 'expect';
 import GifsOrNot from './GifsOrNot';
 import NoSearch from './NoSearch';
-import Results from '../containers/Results';
+import Results from './Results';
 
 configure({ adapter: new Adapter() });
 
