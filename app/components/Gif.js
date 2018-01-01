@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Gif = props => (
-  <a href={props.link} target="_blank">
+  <a href={props.link} target="_blank" rel="noopener noreferrer">
     <img src={props.imgSrc} alt={props.altText} />
   </a>
 );
