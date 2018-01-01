@@ -3,21 +3,27 @@ import PropTypes from 'prop-types';
 
 // container component to search for gifs
 const SearchBar = props => (
-  <form
-    id="searchbar"
-    onSubmit={(e) => {
-      e.preventDefault();
-      props.fetchGifsRequest(props.searchTerm);
-    }}
-  >
-    <input
-      id="searchterm"
-      type="search"
-      name="q"
-      onChange={(e) => { props.changeSearchValue(e.target.value); }}
-    />
-    <input type="submit" />
-  </form>
+  <div className="jumbotron">
+    <div className="row justify-content-center">
+      <form
+        className="col-6 justify-content-center"
+        id="searchbar"
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.fetchGifsRequest(props.searchTerm);
+        }}
+      >
+        <input
+          style={{ height: '100px', width: '75%', fontSize: '48px'}}
+          id="searchterm"
+          type="search"
+          placeholder="Search For Some Gifs"
+          onChange={(e) => { props.changeSearchValue(e.target.value); }}
+        />
+        <input type="submit" style={{ height: '100px', width: '25%', fontSize: '48px' }} />
+      </form>
+    </div>
+  </div>
 );
 
 // action creator for api request

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Pagination } from 'react-bootstrap';
 
 const Pages = props => (
-  <div>
+  <div className="row justify-content-center">
     <Pagination
       next
       prev
@@ -14,6 +14,8 @@ const Pages = props => (
     />
   </div>
 );
+
+
 
 Pages.propTypes = {
   page: PropTypes.number.isRequired,

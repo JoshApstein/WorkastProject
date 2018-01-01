@@ -24,7 +24,7 @@ describe('Results Component', () => {
   const wrapper = shallow(<Results currentGifs={arrayOfGifs} />);
   it('always renders a div', () => {
     const div = wrapper.find('div');
-    expect(div.length).toBe(1);
+    expect(div.length).toBeGreaterThan(0);
   });
   it('renders arrayLengths amount of Gif components', () => {
     const gifs = wrapper.find(Gif);

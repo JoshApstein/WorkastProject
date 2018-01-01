@@ -3,8 +3,8 @@ import reducer from './reducer';
 
 const initState = {
   searchTerm: '',
-  hasSearched: false,
   isFetching: false,
+  gifsLength: 0,
   page: 0,
   gifs: {},
 };
@@ -25,9 +25,6 @@ describe('reducer', () => {
     });
     it('should update page', () => {
       expect(actual.page).toBe(1)
-    });
-    it('should update hasSearched', () => {
-      expect(actual.hasSearched).toBeTruthy();
     });
     it('should update gifsLength', () => {
       expect(actual.gifsLength).toBeGreaterThan(0);

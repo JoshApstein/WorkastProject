@@ -2,7 +2,7 @@ const initialState = {
   searchTerm: '',
   page: 0,
   isFetching: false,
-  hasSearched: false,
+  gifsLength: 0,
   gifs: {},
 };
 
@@ -25,7 +25,6 @@ export default (state = initialState, action) => {
         gifsLength: action.data.length,
         isFetching: false,
         currentGifs: firstTen,
-        hasSearched: true,
       };
     }
     case ('FETCH_GIFS_ERROR'): {
