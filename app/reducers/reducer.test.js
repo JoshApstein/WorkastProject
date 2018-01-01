@@ -24,7 +24,7 @@ describe('reducer', () => {
       expect(actual.isFetching).toBeFalsy();
     });
     it('should update page', () => {
-      expect(actual.page).toBe(1)
+      expect(actual.page).toBe(1);
     });
     it('should update gifsLength', () => {
       expect(actual.gifsLength).toBeGreaterThan(0);
@@ -45,19 +45,19 @@ describe('reducer', () => {
   });
   describe('change page', () => {
     it('should update page', () => {
-      expect(reducer({ gifs: {dog:[1,2,3]}, isFetching: true, searchTerm: 'dog' }, { type: 'CHANGE_PAGE', currPage: 1 }).page).toBe(1);
+      expect(reducer({ gifs: { dog: [1, 2, 3] }, isFetching: true, searchTerm: 'dog' }, { type: 'CHANGE_PAGE', currPage: 1 }).page).toBe(1);
     });
     it('should update curent gifs', () => {
       const arr = [];
-      for (let i = 0; i < 30; i++) arr.push(i);
+      for (let i = 0; i < 30; i += 1) arr.push(i);
       expect(reducer({
         gifs: {
-          dog: arr
-        }, 
+          dog: arr,
+        },
         page: 2,
         currentGifs: arr.slice(0, 10),
         isFetching: true,
-        searchTerm: 'dog'
+        searchTerm: 'dog',
       }, { type: 'CHANGE_PAGE', currPage: 2 }).currentGifs).toEqual(arr.slice(10, 20));
     });
   });

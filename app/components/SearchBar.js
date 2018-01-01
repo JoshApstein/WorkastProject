@@ -14,7 +14,7 @@ const SearchBar = props => (
         }}
       >
         <input
-          style={{ height: '100px', width: '75%', fontSize: '48px'}}
+          style={{ height: '100px', width: '75%', fontSize: '48px' }}
           id="searchterm"
           type="search"
           placeholder="Search For Some Gifs"

@@ -5,12 +5,13 @@ import Results from '../containers/Results';
 
 // Whole application
 class App extends Component {
+  // get trending gifs on first load
   componentDidMount() {
     this.props.fetchGifsRequest();
   }
   render() {
     return (
-      <div>
+      <div id="app">
         <SearchBar />
         <Results />
       </div>);

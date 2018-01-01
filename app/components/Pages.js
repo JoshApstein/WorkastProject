@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination } from 'react-bootstrap';
 
+// component for pagination
 const Pages = props => (
   <div className="row justify-content-center">
     <Pagination
@@ -14,7 +15,6 @@ const Pages = props => (
     />
   </div>
 );
-
 
 
 Pages.propTypes = {

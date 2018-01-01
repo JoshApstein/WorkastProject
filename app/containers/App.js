@@ -5,7 +5,7 @@ import { fetchGifsRequest } from '../actions/action';
 const mapDispatchToProps = dispatch => ({
   fetchGifsRequest: (searchTerm) => {
     dispatch(fetchGifsRequest(searchTerm));
-  }
+  },
 });
 
 
