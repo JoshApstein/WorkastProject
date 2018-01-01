@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import GifsOrNot from '../components/GifsOrNot';
+import Results from '../components/Results';
 
 export default connect(state => ({
-  hasSearched: state.hasSearched,
   currentGifs: state.currentGifs,
-}))(GifsOrNot);
+}))(Results);

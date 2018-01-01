@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch';
 
 export default (search) => {
-  if (!search) {
-    return new Error('Cannot read property \'data\' of undefined');
-  }
+  const trendOrSearch = !search ?
+    fetch('http://api.giphy.com/v1/gifs/trending?api_key=iy5kPHVlbDexRE46UhbuiwvOr3fej1Af') :
+    fetch(`http://api.giphy.com/v1/gifs/search?api_key=iy5kPHVlbDexRE46UhbuiwvOr3fej1Af&q=${search.replace(' ', '+')}`)
   // get data from giphy api
   // eslint-disable-next-line
-  return fetch(`http://api.giphy.com/v1/gifs/search?api_key=iy5kPHVlbDexRE46UhbuiwvOr3fej1Af&q=${search.replace(' ', '+')}`)
+  return trendOrSearch
     .then(data => data.json())
     .then(data => data)
     .catch(err => err);

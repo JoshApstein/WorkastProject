@@ -11,7 +11,7 @@ configure({ adapter: new Adapter() });
 describe('Pages Container', () => {
   let store;
   const makeWrapper = (pageStart) => {
-    store = configureStore()({ gifLength: 25, page: pageStart });
+    store = configureStore()({ gifsLength: 25, page: pageStart });
     return mount(<Pages
       store={store}
       changePage={changePage}

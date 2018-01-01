@@ -2,9 +2,10 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import expect from 'expect';
-import App from './App';
+import App from '../components/App';
 import SearchBar from '../containers/SearchBar';
-import GifsOrNot from '../containers/GifsOrNot';
+import Results from '../containers/Results';
+import { fetchGifsRequest } from '../actions/action';
 
 configure({ adapter: new Adapter() });
 
@@ -13,8 +14,9 @@ describe('App Component', () => {
   let shallowApp;
   const app = () => {
     if (!shallowApp) {
-      shallowApp = shallow(<App />);
+      shallowApp = shallow(<App fetchGifsRequest={fetchGifsRequest} />);
     }
+
     return shallowApp;
   };
 
@@ -24,8 +26,7 @@ describe('App Component', () => {
 
   // app should always render a div
   it('always returns a div', () => {
-    const divs = app().find('div');
-    expect(divs.length).toBeGreaterThan(0);
+    expect(app().find('div').length).toBeGreaterThan(0);
   });
 
   describe('The rendered div', () => {
@@ -35,8 +36,8 @@ describe('App Component', () => {
     it('should render a search bar', () => {
       expect(app().children().find(SearchBar).length).toEqual(1);
     });
-    it('should render gifsornot', () => {
-      expect(app().children().find(GifsOrNot).length).toEqual(1);
+    it('should render results', () => {
+      expect(app().children().find(Results).length).toEqual(1);
     });
   });
 });

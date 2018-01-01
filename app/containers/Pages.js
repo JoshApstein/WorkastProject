@@ -4,7 +4,7 @@ import { changePage } from '../actions/action';
 
 const mapStateToProps = store => ({
   page: store.page,
-  gifLength: store.gifLength,
+  gifsLength: store.gifsLength,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -8,7 +8,7 @@ const Pages = props => (
       next
       prev
       bsSize="large"
-      items={Math.ceil(props.gifLength / 10 )}
+      items={Math.ceil(props.gifsLength / 10)}
       activePage={props.page}
       onSelect={props.changePage}
     />
@@ -17,7 +17,7 @@ const Pages = props => (
 
 Pages.propTypes = {
   page: PropTypes.number.isRequired,
-  gifLength: PropTypes.number.isRequired,
+  gifsLength: PropTypes.number.isRequired,
   changePage: PropTypes.func.isRequired,
 };
 

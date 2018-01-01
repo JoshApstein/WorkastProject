@@ -17,6 +17,10 @@ const Results = props => (
   </div>
 );
 
+Results.defaultProps = {
+  currentGifs: [],
+};
+
 Results.propTypes = {
   currentGifs: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
