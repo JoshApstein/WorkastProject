@@ -2,6 +2,7 @@
 const initialState = {
   searchTerm: '',
   isFetching: false,
+  hasSearched: false,
   gifs: {},
 };
 
@@ -15,9 +16,13 @@ export default (state = initialState, action) => {
       };
     }
     case ('FETCH_GIFS_SUCCESS'): {
+      const newState = state;
+      newState.gifs[state.searchTerm] = action.data;
       return {
-        ...state,
+        ...newState,
         isFetching: false,
+        currentGifs: action.data,
+        hasSearched: true,
       };
     }
     case ('FETCH_GIFS_ERROR'): {

@@ -1,12 +1,11 @@
 import React from 'react';
 import SearchBar from '../containers/SearchBar';
+import GifsOrNot from '../containers/GifsOrNot';
 
 // Whole application
 export default () => (
   <div>
     <SearchBar />
-    <h1>
-      Content
-    </h1>
+    <GifsOrNot />
   </div>
 );

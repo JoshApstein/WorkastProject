@@ -3,6 +3,7 @@ import reducer from './reducer';
 
 const initState = {
   searchTerm: '',
+  hasSearched: false,
   isFetching: false,
   gifs: {},
 };
@@ -18,7 +19,7 @@ describe('reducer', () => {
   });
   describe('success', () => {
     it('should update isFetching', () => {
-      expect(reducer({ isFetching: true }, { type: 'FETCH_GIFS_SUCCESS' }).isFetching).toBeFalsy();
+      expect(reducer({ gifs: {}, isFetching: true, searchTerm: 'dogs' }, { type: 'FETCH_GIFS_SUCCESS', data: ['imgs'] }).isFetching).toBeFalsy();
     });
   });
   describe('error', () => {
