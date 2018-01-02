@@ -1,4 +1,5 @@
 import expect from 'expect';
+import 'babel-polyfill';
 import fetchGifs from './api';
 
 describe('api call', () => {

@@ -1,4 +1,5 @@
 import expect from 'expect';
+import 'babel-polyfill';
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as actions from '../actions/action';
 import fetchGifs from '../api/api';

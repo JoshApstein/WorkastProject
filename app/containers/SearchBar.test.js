@@ -1,5 +1,6 @@
 import expect from 'expect';
 import React from 'react';
+import 'raf/polyfill';
 import configureStore from 'redux-mock-store';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

@@ -1,4 +1,5 @@
 import React from 'react';
+import 'raf/polyfill';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import expect from 'expect';

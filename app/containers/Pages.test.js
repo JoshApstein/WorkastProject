@@ -1,4 +1,5 @@
 import expect from 'expect';
+import 'raf/polyfill';
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { configure, mount } from 'enzyme';

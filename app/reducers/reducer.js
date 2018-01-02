@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
     // we got some data
     case ('FETCH_GIFS_SUCCESS'): {
       const newState = state;
-      newState.gifs[state.searchTerm] = action.data;
+      newState.gifs[state.searchTerm || 'trending'] = action.data;
       const firstTen = action.data.slice(0, 10);
       return {
         ...newState,

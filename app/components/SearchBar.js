@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 // container component to search for gifs
 const SearchBar = props => (
   <div className="jumbotron">
+    <h1 className="row justify-content-center">
+      Search for Gifs!
+    </h1>
     <div className="row justify-content-center">
       <form
         className="col-6 justify-content-center"
@@ -14,13 +17,13 @@ const SearchBar = props => (
         }}
       >
         <input
-          style={{ height: '100px', width: '75%', fontSize: '48px' }}
+          style={{ height: '50px', width: '75%', fontSize: '36px' }}
           id="searchterm"
           type="search"
           placeholder="Search For Some Gifs"
           onChange={(e) => { props.changeSearchValue(e.target.value); }}
         />
-        <input type="submit" style={{ height: '100px', width: '25%', fontSize: '48px' }} />
+        <input type="submit" style={{ height: '50px', width: '25%', fontSize: '36px' }} />
       </form>
     </div>
   </div>

@@ -3,4 +3,5 @@ import Results from '../components/Results';
 
 export default connect(state => ({
   currentGifs: state.currentGifs,
+  isFetching: state.isFetching,
 }))(Results);

@@ -2,17 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Gif from './Gif';
 import Pages from '../containers/Pages';
+import Spinner from './Spinner';
 
 // Component to Store all Gifs and Pagination of those gifs
 // I probably should separate the gifs into another component
 // The for loop allows us to create rows of 2
 const Results = props => (
   <div className="container">
-    <Pages />
     {(() => {
+      // arr to store rows of 2 gifs
+      // render Pages only if we have gifs to show
       const Rows = [];
       const currGifs = props.currentGifs;
-      for (let i = 0; i < currGifs.length; i += 2) {
+      const currGifsLen = currGifs.length;
+      if (!currGifsLen) {
+        return (<div className="row justify-content-center">
+          {props.isFetching ?
+            <Spinner /> :
+            <h1 style={{ color: 'red' }}>
+              Sorry, but we could not find any Gifs to match your search. Please try again.
+            </h1>
+          }
+        </div>); // eslint-disable-line
+      }
+      Rows.push(<Pages key={-1} />);
+      for (let i = 0; i < currGifsLen; i += 2) {
         Rows.push((
           <div className="row justify-content-center align-items-center" key={i}>
             <Gif
